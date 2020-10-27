@@ -2,26 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	_ "encoding/json"
 	"fmt"
-	_ "io/ioutil"
 	"net/http"
 	"strings"
 )
-type Data struct {
-	LabelList  []LabelList `json:"label_list"`
 
-}
-type LabelList struct {
-	Id string `json:"id"`
-	Name string `json:"name"`
-}
-type Req struct {
-	Code int
-	Message string
-	DATA Data
-}
-type Req1 Req
 func main() {
 	//func Post(url string, bodyType string, body io.Reader) (resp *Response, err error)
 	resp, err := http.Post("http://manage.xiniaodev.com:3000/mock/25/appv5/labelList",
@@ -33,24 +18,18 @@ func main() {
 
 	defer resp.Body.Close()
 	//body, err := ioutil.ReadAll(resp.Body)
-	//fmt.Println(string(body))
+
 	decoder := json.NewDecoder(resp.Body)
-	var frontReq Req
-	err = decoder.Decode(&frontReq)
+
+	var frontReq1 Req1
+	err = decoder.Decode(&frontReq1)
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	fmt.Println(frontReq)
-	fmt.Println(frontReq.Message)
-	fmt.Println(frontReq.DATA.LabelList[0])
-	fmt.Println(frontReq.DATA.LabelList[0].Id)
+	fmt.Println(frontReq1)
+	fmt.Println(frontReq1.Message)
+	fmt.Println(frontReq1.DATA)
 
-	DataInfo := frontReq.DATA.LabelList
-
-	for index ,item :=range DataInfo{
-		fmt.Println("index :",index)
-		fmt.Println("name :", item.Name)
-	}
-
+	//fmt.Println(string(body))
 }
