@@ -6,6 +6,7 @@ func main() {
 	n1()
 	m1()
 	n1()
+	Goa()
 }
 
 func n1() {
