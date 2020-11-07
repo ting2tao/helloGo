@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  godev:
+    image: ubuntu
+    restart: always
+    tty: true
+    stdin_open: true
+    environment:
+      TZ: Asia/Shanghai
+    ports:
+      - 8080:8080
+      - 8081:8081
+      - 8443:8443
+      - 8000:8000
+    volumes:
+      - /d/sct:/usr/local/src
