@@ -8,4 +8,4 @@ services:
     environment:
       TZ: Asia/Shanghai
     volumes:
-       - /d/sct:/usr/local/src
+       - D:/sct:/usr/local/src
