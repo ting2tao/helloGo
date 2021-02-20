@@ -30,17 +30,19 @@ func main() {
 
 func wait2() {
 	wg := sync.WaitGroup{}
+	n := 2
 	wg.Add(2)
 	go func() {
 		defer wg.Done()
 		time.Sleep(time.Second)
 		fmt.Println("rountine 1")
 	}()
-	go func() {
+	go func(n int) {
 		defer wg.Done()
 		time.Sleep(time.Second)
-		fmt.Println("rountine 2")
-	}()
+		fmt.Println("rountine 2 ")
+		fmt.Println(n)
+	}(n)
 	wg.Wait()
 	fmt.Println("total")
 }
