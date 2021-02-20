@@ -17,7 +17,7 @@ func a() {
 func b() {
 	// Deferred function calls are executed in Last In First Out order after the surrounding function returns.
 	for i := 0; i < 4; i++ {
-		defer fmt.Print(i)
+		defer fmt.Println(i)
 	}
 }
 
