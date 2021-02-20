@@ -8,6 +8,14 @@ import (
 )
 
 func main() {
+	wait1()
+
+	wait2()
+
+	wait3()
+}
+
+func wait1() {
 	runtime.GOMAXPROCS(1)
 	wg := sync.WaitGroup{}
 	wg.Add(20)
@@ -24,16 +32,15 @@ func main() {
 		}(i)
 	}
 	wg.Wait()
-
-	wait2()
 }
-
 func wait2() {
+	fmt.Println("wait2 start################################")
 	wg := sync.WaitGroup{}
 	n := 2
-	wg.Add(2)
+	wg.Add(3)
 	go func() {
 		defer wg.Done()
+		n++
 		time.Sleep(time.Second)
 		fmt.Println("rountine 1")
 	}()
@@ -41,8 +48,52 @@ func wait2() {
 		defer wg.Done()
 		time.Sleep(time.Second)
 		fmt.Println("rountine 2 ")
-		fmt.Println(n)
+
+	}(n)
+	go func(n int) {
+		defer wg.Done()
+		time.Sleep(time.Second)
+		fmt.Println("rountine 3 ")
+
 	}(n)
 	wg.Wait()
-	fmt.Println("total")
+	fmt.Println("n:", n)
+	fmt.Println("wait2 end ################################")
+}
+
+func wait3() {
+
+	var wg sync.WaitGroup
+
+	wg.Add(3)
+	go func(n int) {
+		fmt.Println("n:", n)
+		t := time.Duration(n) * time.Second
+		fmt.Println("t:", t)
+		time.Sleep(t)
+
+		wg.Done()
+	}(1)
+
+	go func(n int) {
+		fmt.Println("n:", n)
+		t := time.Duration(n) * time.Second
+		fmt.Println("t:", t)
+		time.Sleep(t)
+
+		wg.Done()
+	}(2)
+
+	go func(n int) {
+		fmt.Println("n:", n)
+		t := time.Duration(n) * time.Second
+		fmt.Println("t:", t)
+		time.Sleep(t)
+
+		wg.Done()
+	}(3)
+
+	wg.Wait()
+
+	fmt.Println("main exit...")
 }
