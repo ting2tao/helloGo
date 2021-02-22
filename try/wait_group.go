@@ -27,6 +27,10 @@ func wait1() {
 	}
 	for i := 0; i < 10; i++ {
 		go func(i int) {
+
+			if i > 4 {
+				time.Sleep(time.Second * 20)
+			}
 			fmt.Println("i: ", i)
 			wg.Done()
 		}(i)
