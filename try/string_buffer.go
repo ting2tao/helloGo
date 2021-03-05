@@ -3,6 +3,8 @@ package main
 import (
 	"bytes"
 	"fmt"
+	strBuff "hello/pkg/strings"
+	"strings"
 	"sync"
 )
 
@@ -12,7 +14,10 @@ func main() {
 		buffer.WriteString("a")
 	}
 	fmt.Println(buffer.String())
+	newStr := strings.Replace(buffer.String(), "a", "b", -1)
+	fmt.Println(newStr)
 	string2()
+	str2()
 }
 
 //源码对于Buffer的定义中,并没有关于锁的字段,在write和read函数中也未发现锁的踪影,所以符合上面提到的文档中的rule,即Buffer并发是不安全的。
@@ -50,4 +55,19 @@ func (b *Buffer) Write(p []byte) (n int, err error) {
 }
 func (b *Buffer) String() string {
 	return b.String()
+}
+
+func str2() {
+	str := strBuff.Append("2", "2", ";", "1；11；")
+	fmt.Println(str)
+	strArr := strings.Split(str, ";")
+	fmt.Println(strArr)
+	fmt.Println(len(strArr))
+	strArr = append(strArr, "A", "B", "C;", "D；E；")
+	fmt.Println(strArr[1])
+	fmt.Println(cap(strArr))
+	str = strBuff.Implode(strArr)
+	fmt.Println(strBuff.Implode(strArr))
+	str = strings.Replace(str, ";", "；", -1)
+	fmt.Println(str)
 }
