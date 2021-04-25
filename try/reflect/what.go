@@ -1,4 +1,4 @@
-package main
+package what
 
 import (
 	"fmt"
@@ -8,7 +8,9 @@ import (
 func main() {
 	i := 10
 	fmt.Printf("%d %T %v \n", i, i, i)
+	var str = "a"
 	q()
+	fmt.Println(str)
 }
 
 type order struct {
@@ -21,6 +23,9 @@ func query(q interface{}) {
 	v := reflect.ValueOf(q)
 	fmt.Println("Type ", t)
 	fmt.Println("Value ", v)
+
+	uv := reflect.ValueOf(F)
+	fmt.Println("Value ", uv)
 }
 
 func q() {

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	joinAvatar := []string{
@@ -16,4 +19,8 @@ func main() {
 
 	useAvatar := joinAvatar[0:3]
 	fmt.Println(useAvatar)
+
+	var intNum int8 = 64
+	fmt.Println(reflect.TypeOf(intNum))
+	fmt.Println(intNum)
 }
