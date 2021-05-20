@@ -13,6 +13,7 @@ type Login struct {
 	User     string `form:"user" json:"user" binding:"required"`
 	Password string `form:"password" json:"password" binding:"required"`
 }
+
 // bind JSON数据
 func funcBindJSON(c *gin.Context) {
 	var json Login
@@ -35,7 +36,7 @@ func funcBindForm(c *gin.Context) {
 
 	// 方法一: 对于FORM数据直接使用Bind函数, 默认使用使用form格式解析,if c.Bind(&form) == nil
 	// 方法二: 使用BindWith函数,如果你明确知道数据的类型
-	if c.BindWith(&form, binding.Form) == nil{
+	if c.BindWith(&form, binding.Form) == nil {
 		if form.User == "TAO" && form.Password == "123" {
 			c.JSON(http.StatusOK, gin.H{"FORM=== status": "you are logged in"})
 		} else {
@@ -46,7 +47,7 @@ func funcBindForm(c *gin.Context) {
 	}
 }
 
-func main(){
+func main() {
 	router := gin.Default()
 	// 下面测试bind JSON数据
 	router.POST("/bindJSON", funcBindJSON)
@@ -76,8 +77,8 @@ func main(){
 
 	//  测试发送XML数据
 	router.GET("/someXML", func(c *gin.Context) {
-		c.XML(http.StatusOK, gin.H{"name":"TAO", "message": "hey, budy", "status": http.StatusOK})
+		c.XML(http.StatusOK, gin.H{"name": "TAO", "message": "hey, budy", "status": http.StatusOK})
 	})
 
-	router.Run(":8888")
+	router.Run(":8866")
 }
