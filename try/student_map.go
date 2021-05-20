@@ -8,15 +8,17 @@ type student struct {
 }
 
 func baseStudent() {
-	m := make(map[string]*student)
+	m := make(map[string]student)
 	students := []student{
 		{Name: "zhou", Age: 24},
 		{Name: "li", Age: 23},
 		{Name: "Hwang", Age: 22},
 	}
 	for _, stu := range students {
-		m[stu.Name] = &stu
+		stu.Age = 211
+		m[stu.Name] = stu
 	}
+	fmt.Println(m)
 	fmt.Println(m["li"].Age)
 }
 
