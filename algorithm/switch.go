@@ -30,7 +30,10 @@ func m() {
 }
 
 func m1() {
-	fmt.Println("hello1")
-	defer fmt.Println("world1")
+	fmt.Println("counting")
+	defer fmt.Println("done")
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
 
 }
