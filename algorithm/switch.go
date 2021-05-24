@@ -18,4 +18,19 @@ func main() {
 	default:
 		fmt.Println("Too far away.")
 	}
+
+	m()
+	m1()
+	//fmt.Println("hello")
+}
+
+func m() {
+	defer fmt.Println("world")
+	fmt.Println("hello")
+}
+
+func m1() {
+	fmt.Println("hello1")
+	defer fmt.Println("world1")
+
 }
