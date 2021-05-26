@@ -10,6 +10,9 @@ func main() {
 	fmt.Println(dpHelper(30))
 	fmt.Println("niceDpHelper(30)", niceDpHelper(30))
 	fmt.Println(coinChange([]int{2}, 3))
+	fmt.Println(dpHelper(30))
+	fmt.Println(niceDpHelper(30))
+	fmt.Println(leeCodeFib(30))
 }
 func fib(n int) int {
 	if n < 2 {
@@ -36,6 +39,7 @@ func dpHelper(n int) int {
 	if n < 2 {
 		return n
 	}
+
 	dp := make([]int, n+1)
 	dp[0], dp[1], dp[2] = 0, 1, 1
 	for i := 3; i <= n; i++ {
@@ -44,20 +48,36 @@ func dpHelper(n int) int {
 	return dp[n]
 }
 
-// 自下而上的dp 数组的迭代解法
-// 缩小空间复杂度 状态压缩
+// 自下而上的dp 数组的迭代解法 优化 状态压缩 使得空间复杂度
+// 一般来说是把一个二维的 DP table 压缩成一维，即把空间复杂度从 O(n^2) 压缩到 O(n)
 func niceDpHelper(n int) int {
 	if n < 2 {
 		return n
 	}
-	sum, prev, curr := 0, 1, 1
+	prev := 1
+	curr := 1
 	for i := 3; i <= n; i++ {
-		sum = prev + curr
+		sum := prev + curr
 		prev = curr
 		curr = sum
 	}
 	return curr
 }
+
+func leeCodeFib(n int) int {
+	if n < 2 {
+		return n
+	}
+	p, q, r := 0, 0, 1
+	for i := 2; i <= n; i++ {
+		p = q
+		q = r
+		r = p + q
+	}
+	return r
+}
+
+
 
 // 1 确定base case 0 返回0 小于0 返回 负1
 //1、确定 base case，这个很简单，显然目标金额 amount 为 0 时算法返回 0，因为不需要任何硬币就已经凑出目标金额了。
