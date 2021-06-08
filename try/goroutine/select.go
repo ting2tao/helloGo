@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 	"time"
 )
@@ -52,13 +53,14 @@ func main() {
 	}()
 	fibonacci(c, quit)
 	defaultSection()
+	runtime.GOMAXPROCS(2)
 	cv := SafeCounter{v: make(map[string]int)}
 	cv.v["key"] = 4
 	for i := 0; i < 1000; i++ {
 		go cv.Inc("key")
 	}
 
-	time.Sleep(time.Second)
+	//time.Sleep(time.Second)
 	fmt.Println(cv.Value("key"))
 
 }
