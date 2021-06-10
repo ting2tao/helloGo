@@ -11,7 +11,6 @@ func main() {
 }
 func getSameStr(str string) (string, int) {
 	strArr := strings.Split(str, "")
-
 	maxValue := strArr[0]
 	maxLength := strings.Count(str, maxValue)
 	strArrRes := ""
@@ -20,16 +19,15 @@ func getSameStr(str string) (string, int) {
 		if v != maxValue {
 			tmpLength = strings.Count(str, v)
 		}
-
 		if maxLength < tmpLength {
 			maxLength = tmpLength
 			maxValue = v
 			strArrRes = ""
 		}
+
 		if v == maxValue {
 			strArrRes += v
 		}
 	}
-
 	return strArrRes, maxLength
 }
