@@ -4,9 +4,11 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"runtime"
 )
 
 func main() {
+	fmt.Println(runtime.GOOS)
 	values := map[string]int{
 		"B2": 2, "C2": 3, "D2": 3, "B3": 5, "C3": 2, "D3": 4, "B4": 6, "C4": 7, "D4": 8}
 	fmt.Println(values)
@@ -32,5 +34,4 @@ func main() {
 		os.Exit(-1)
 	}
 
-	fmt.Println()
 }
