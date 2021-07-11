@@ -34,6 +34,7 @@ func main() {
 	//fmt.Println(allQ)
 	//go P()
 	//go P2()
+	FindKey(2, 3)
 	go Map2()
 	time.Sleep(2000000)
 	//fmt.Println(222)

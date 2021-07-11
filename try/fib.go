@@ -13,6 +13,15 @@ func main() {
 	fmt.Println(dpHelper(30))
 	fmt.Println(niceDpHelper(30))
 	fmt.Println(leeCodeFib(30))
+
+	v := [5]int{1, 2, 3, 4, 5}
+	a := v[:3]
+	b := v[2:]
+	copy(b, a)
+	b[0] = 888
+	fmt.Println(a)
+	fmt.Println(b)
+	fmt.Println(v)
 }
 func fib(n int) int {
 	if n < 2 {
@@ -76,8 +85,6 @@ func leeCodeFib(n int) int {
 	}
 	return r
 }
-
-
 
 // 1 确定base case 0 返回0 小于0 返回 负1
 //1、确定 base case，这个很简单，显然目标金额 amount 为 0 时算法返回 0，因为不需要任何硬币就已经凑出目标金额了。
