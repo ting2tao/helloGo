@@ -59,6 +59,7 @@ func (ctl IndexCtl) IndexData(ctx *gin.Context) {
 	go func(ctx *gin.Context, ch *chan map[string]interface{}) {
 		ctl.liveList(ctx, lp)
 		*ch <- gin.H{"key": "liveList", "value": liveList}
+		close(*ch)
 	}(ctx, &ch)
 
 	go func(ctx *gin.Context, ch *chan map[string]interface{}) {

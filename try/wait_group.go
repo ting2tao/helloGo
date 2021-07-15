@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	runtime.GOMAXPROCS(1)
 	wait1()
 
 	wait2()
