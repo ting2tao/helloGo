@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/Slovty/util-collection/funcs"
 	"strconv"
 	"time"
 )
@@ -34,7 +35,7 @@ func main() {
 	//fmt.Println(allQ)
 	//go P()
 	//go P2()
-	FindKey(2, 3)
+	funcs.FindKey(2, 3)
 	go Map2()
 	time.Sleep(2000000)
 	//fmt.Println(222)

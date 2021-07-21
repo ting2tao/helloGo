@@ -1,4 +1,6 @@
 github.com/PuerkitoBio/goquery v1.5.1/go.mod h1:GsLWisAFVj4WgDibEWF4pvYnkVQBpKBKeU+7zCJoLcc=
+github.com/Slovty/util-collection v1.0.0 h1:AdpC/6lzbb2jpgxEzRW+uMmYe9d43kcmxAYGllvJgg8=
+github.com/Slovty/util-collection v1.0.0/go.mod h1:OsI1D9lUDRm9pTCA+HynVGF3V7GB4P+f3mPIrC7QeYs=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -55,8 +57,6 @@ github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e h1:fD57ERR4JtEqsWb
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/slovty/patterns-for-public v0.0.0-20210628145604-07d3997d72c6 h1:9bzV1JUs9ivcakZ7kxNILAFe/4/43wXN9d2tBxuPEQU=
-github.com/slovty/patterns-for-public v0.0.0-20210628145604-07d3997d72c6/go.mod h1:5kLSdeRmP7n1PH1Ka8h9rJ5pxX0Oq5AKzd21kGzdo/g=
 github.com/slovty/patterns-for-public v1.0.0 h1:gkvm1bQTRnZ3KOrt5zdGxuDP4reG/LOAQS/6V11hbX0=
 github.com/slovty/patterns-for-public v1.0.0/go.mod h1:nfNIb6X/JjqEfvlLJYCUcpUaSFxNJ2p9jxsuHVWOQGE=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
