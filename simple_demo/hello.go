@@ -1,12 +1,22 @@
 package main
 
 /**
-	需要同时运行  hello.go global_scope.go
+需要同时运行  hello.go global_scope.go
 
 */
+import (
+	"fmt"
+	"github.com/slovty/patterns-for-public/pattern"
+)
 
-import _ "fmt"
+func main() {
+	Goa()
+}
+
 func Goa() {
 	println("Hello World")
-	println(a1)
+	println("666")
+	fmt.Println("30")
+
+	fmt.Println(pattern.FullDISCOUNT)
 }
