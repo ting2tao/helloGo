@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"sort"
 	"sync"
 )
 
@@ -17,4 +18,13 @@ func main() {
 		}(i)
 	}
 	wg2.Wait()
+	a := []int{5, 3, 1, 2, 3}
+	b := []int{1, 2, 3}
+	sort.Ints(a)
+	sort.Ints(b)
+	c := []string{"A", "B", "Hello", "D", "E", "C"}
+	sort.Strings(c)
+	fmt.Println(c)
+	fmt.Println(a)
+	fmt.Println(b)
 }
