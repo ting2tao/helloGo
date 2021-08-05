@@ -1,11 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	forRange()
 	forNum()
 	forRangeSlice()
+
 }
 
 func forRange() {
