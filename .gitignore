@@ -24,3 +24,9 @@ go.sum
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/tasks.xml
+/.idea/.gitignore
+/.idea/hello.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
