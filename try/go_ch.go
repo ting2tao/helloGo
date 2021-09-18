@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	ch := make(chan int, 1)
@@ -8,6 +11,25 @@ func main() {
 
 	fmt.Println("发送成功")
 	cha()
+}
+
+func ch1() {
+	ch := make(chan int)
+	go func(ch chan int) {
+		ch <- 1
+		ch <- 2
+		ch <- 3
+		fmt.Println("发送完毕")
+	}(ch)
+
+	for {
+		select {
+		case res := <-ch:
+			fmt.Println("取出来了数据，", res)
+		case time.After(time.Second * 5):
+
+		}
+	}
 }
 
 // channel 练习

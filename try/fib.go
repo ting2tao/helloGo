@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	fmt.Println(fib1(30))
 	fmt.Println(fib(30))
 	fmt.Println(dpHelper(30))
 	fmt.Println("niceDpHelper(30)", niceDpHelper(30))
@@ -23,6 +24,14 @@ func main() {
 	fmt.Println(b)
 	fmt.Println(v)
 }
+
+func fib1(n int) int {
+	if n < 2 {
+		return n
+	}
+	return fib1(n-1) + fib1(n-2)
+}
+
 func fib(n int) int {
 	if n < 2 {
 		return n
