@@ -11,6 +11,7 @@ func main() {
 
 	fmt.Println("发送成功")
 	cha()
+	ch1()
 }
 
 func ch1() {
@@ -26,8 +27,8 @@ func ch1() {
 		select {
 		case res := <-ch:
 			fmt.Println("取出来了数据，", res)
-		case time.After(time.Second * 5):
-
+		case <-time.After(time.Second * 5):
+			fmt.Println("过了5s，")
 		}
 	}
 }
