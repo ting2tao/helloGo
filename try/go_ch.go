@@ -6,12 +6,33 @@ import (
 )
 
 func main() {
-	ch := make(chan int, 1)
-	ch <- 10
 
-	fmt.Println("发送成功")
-	cha()
-	ch1()
+	ch := make(chan struct{}, 2)
+
+	go func() {
+		time.Sleep(time.Second * 3)
+		fmt.Println("第一个go ")
+		ch <- struct{}{}
+	}()
+	fmt.Println("过了一会")
+	go func() {
+		time.Sleep(time.Second * 5)
+		fmt.Println("第二个go ")
+
+		ch <- struct{}{}
+	}()
+	for i := 0; i < 2; i++ {
+		<-ch
+	}
+
+	fmt.Println("完了")
+	//cha()
+	//ch := make(chan int, 1)
+	//ch <- 10
+	//
+	//fmt.Println("发送成功")
+	//
+	//ch1()
 }
 
 func ch1() {
