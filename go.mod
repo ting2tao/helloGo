@@ -3,8 +3,10 @@ module hello
 go 1.15
 
 require (
+	github.com/Lofanmi/chinese-calendar-golang v0.0.0-20211214151323-ef5cb443e55e // indirect
 	github.com/Slovty/util-collection v1.0.0
 	github.com/aliyunmq/mq-http-go-sdk v1.0.3
+	github.com/brianvoe/gofakeit/v6 v6.11.0 // indirect
 	github.com/facebookgo/stack v0.0.0-20160209184415-751773369052 // indirect
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-sql-driver/mysql v1.5.0

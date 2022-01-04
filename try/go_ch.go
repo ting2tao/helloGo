@@ -5,8 +5,33 @@ import (
 	"time"
 )
 
-func main() {
+// channel 练习
+func chWait() {
+	chWait := make(chan int)
+	// 开启goroutine将0~100的数发送到ch1中
+	var sum int
+	int3s := []int{}
+	go func() {
+		for i := 0; i < 100; i++ {
+			sum += i
+			if i%3 == 0 {
+				int3s = append(int3s, i)
+			}
+			chWait <- i
+		}
+		close(chWait)
+	}()
 
+	// 在主goroutine中从ch2中接收值打印
+	for i := range chWait { // 通道关闭后会退出for range循环
+		fmt.Println(i)
+	}
+	fmt.Println(sum)
+	fmt.Println(int3s)
+}
+
+func main() {
+	chWait()
 	ch := make(chan struct{}, 2)
 
 	go func() {
