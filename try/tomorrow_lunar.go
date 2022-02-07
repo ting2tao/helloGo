@@ -8,9 +8,16 @@ import (
 )
 
 func main() {
-	for i := 0; i <= 300; i++ {
-		fmt.Println(i, GetTomorrowLunar())
-	}
+	start, end := GetPeriodTime1(time.Now(), 21, 1)
+	fmt.Println("getPassRecordMobilesByPeriod开始结束时间", fmt.Sprintf("%s%s", start, end))
+	//for i := 0; i <= 300; i++ {
+	//	fmt.Println(i, GetTomorrowLunar())
+	//}
+}
+func GetPeriodTime1(now time.Time, hour int, span int) (time.Time, time.Time) {
+	end := time.Date(now.Year(), now.Month(), now.Day(), hour, 0, 0, 0, time.Local)
+	start := end.AddDate(0, 0, -span)
+	return start, end
 }
 
 var TomorrowLunarDate *time.Time
@@ -64,7 +71,7 @@ func GetTomorrowLunar() string {
 	// 时间戳
 	c := calendar.ByTimestamp(t.Unix())
 	bytes, _ := c.ToJSON()
-	var lunar LunarCalendar
+	var lunar LunarCalendar1
 	json.Unmarshal(bytes, &lunar)
 	TomorrowLunarDateString = fmt.Sprintf("明日是%s，星期%s，农历%s%s。\n", t.Format("2006年01月02日"), lunar.Solar.WeekAlias, lunar.Lunar.MonthAlias, lunar.Lunar.DayAlias)
 	TomorrowLunarDate = &t
