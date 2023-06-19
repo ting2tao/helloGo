@@ -17,7 +17,7 @@ func main() {
 		"https://xiniao-upload.oss-accelerate.aliyuncs.com/AI/071ae2d5cd0f48bbfa64e2549977e584.jpg",
 	}
 
-	useAvatar := joinAvatar[0:3]
+	useAvatar := joinAvatar[0:8]
 	fmt.Println(useAvatar)
 
 	var intNum int8 = 64
