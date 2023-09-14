@@ -57,7 +57,7 @@ func main() {
 		{"V0001ZHO4", "城阳_QD001"},
 		{"V0001ZHTO", "黎托_CS001"},
 		{"V0001ZHGC", "金鸡湖西_SUZ002"}}
-	fileStore, _ := os.OpenFile("store.txt", os.O_CREATE|os.O_RDWR, 0666)
+	fileStore, _ := os.OpenFile("D:/workSpace/goworkspace/src/hello/try/store.txt", os.O_CREATE|os.O_RDWR, 0775)
 	for _, cStr := range sliceA {
 		sql := `update pride_store  set basic_attrs = jsonb_set (
   	basic_attrs,

@@ -1,0 +1,66 @@
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 39251.26,finish_time='2022-11-30' where final_status =1 and contract_no='WWY-SHHXY-2022-051';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 21838.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWY-SHHXJ-2022-096';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 10120.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-JZ-2022-SH-446';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 12800.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-JZ-2022-SH-700';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 4947.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-XS-2022-SH-652';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 35400.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-748';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 23800.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-741';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 3341.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-734';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 21949.99,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-739';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 17900.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-747';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 19900.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-742';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 18050.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-746';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 19900.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-744';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 18398.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-745';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 7900.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-738';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 53641.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-786';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 21300.00,finish_time='2022-10-31' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-715';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 28292.00,finish_time='2022-09-30' where final_status =1 and contract_no='SHHXJ-2022-097';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 73576.99,finish_time='2022-11-30' where final_status =1 and contract_no='VS-ZYSH-PY-2022-050';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 6983.00,finish_time='2022-09-30' where final_status =1 and contract_no='WWYH-JZ-2022-SH-073';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 44768.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWY-SHHXJ-2022-339';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 1870.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWY- SHHXJ-2022-047';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 40309.00,finish_time='2022-09-30' where final_status =1 and contract_no='VS-ZYSH-PY-2022-073';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 82060.05,finish_time='2022-11-30' where final_status =1 and contract_no='WWY-SHHXJ-2022-10';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 22204.90,finish_time='2022-09-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-345';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 10608.00,finish_time='2022-09-30' where final_status =1 and contract_no='WWY-SHHXJ-2022-11';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 13762.00,finish_time='2022-11-30' where final_status =1 and contract_no='SHHXJ-2022-054';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 3217.00,finish_time='2022-08-31' where final_status =1 and contract_no='SHHXJ-2022-022';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 18600.00,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-ZZ-2022-SH-784';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 23734.97,finish_time='2022-09-30' where final_status =1 and contract_no='SHHXJ-2022-062';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 9580.75,finish_time='2022-11-30' where final_status =1 and contract_no='WWYX-JZ-2022-SH-529';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 25000.00,finish_time='2022-12-30' where final_status =1 and contract_no='WWYX-XS-2022-SH-080';
+update zeus_contract  set final_status=2,updated_source='230913-上海刷单2022年线下结转',pending_cost=0,pending_income=0,updated_time=NOW(),
+                          confirmed_income= 12690.00,finish_time='2022-12-30' where final_status =1 and contract_no='WWYX-XS-2022-SH-190';
