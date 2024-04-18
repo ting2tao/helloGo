@@ -6,7 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
-	"hello/pkg/logger"
 	"io"
 	"log"
 	"strconv"
@@ -48,27 +47,11 @@ func Logrus(serverName string) gin.HandlerFunc {
 		//endTime := time.Now()
 		latencyTime := time.Since(startTime)
 		reqMethod := c.Request.Method
-		platform := c.Request.Header.Get("platform")
-		if platform == "" {
-			platform = c.Request.Header.Get("ServerName")
-			if platform == "" {
-				platform = "Unknown"
-			}
-		}
-		appVersion := c.Request.Header.Get("app_version")
-		if appVersion == "" {
-			appVersion = c.Request.Header.Get("version")
-		}
-		osVersion := c.Request.Header.Get("os_version")
-		model := c.Request.Header.Get("model")
+
 		reqUri := c.Request.RequestURI
 		statusCode := c.Writer.Status()
 		clientIP := c.ClientIP()
-		Infof("|%3s|%3s|%3s|%3s|%3d|%13v|%15s|%s|%s|%s|trace_id=%s",
-			model,
-			osVersion,
-			platform,
-			appVersion,
+		Infof("|%3d|%13v|%15s|%s|%s|%s|trace_id=%s",
 			statusCode,
 			latencyTime,
 			clientIP,
@@ -101,19 +84,17 @@ func SetUserID(c *gin.Context) {
 
 func main() {
 	r := gin.Default()
-	r.Use(Logger())             // 使用自定义的Logger中间件
-	r.Use(logger.Logrus("asd")) // 使用自定义的Logger中间件
+	r.Use(Logger())      // 使用自定义的Logger中间件
+	r.Use(Logrus("asd")) // 使用自定义的Logger中间件
 
 	r.GET("/test", func(c *gin.Context) {
 		example := c.MustGet("example").(string)
 
-		// 它会打印: "12345"
 		fmt.Println(example)
 	})
 	r.POST("/test", func(c *gin.Context) {
 		example := c.MustGet("example").(string)
 
-		// 它会打印: "12345"
 		fmt.Println(example)
 	})
 
